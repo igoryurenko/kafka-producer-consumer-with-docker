@@ -1,0 +1,5 @@
+FROM iyurenko/oracle-java-8:latest
+MAINTAINER Yurenko Igor
+ARG JAR_FILE
+ADD listener/target/listener-0.0.1-SNAPSHOT.jar app.jar
+ENTRYPOINT ["java","-jar","/app.jar"]
